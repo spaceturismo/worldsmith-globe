@@ -994,7 +994,7 @@ const planetName=seed=>makeName(mulberry32(hashStr('n'+seed)));
 
 /* ---------- scene ---------- */
 const canvas=$('#gl'),renderer=new THREE.WebGLRenderer({canvas,antialias:true});
-renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));
 const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(40,1,.1,100);
 let camDist=3.6;camera.position.set(0,0,camDist);
 const sun=new THREE.DirectionalLight(0xfff2dd,1.35);sun.position.set(-4,2.5,4);scene.add(sun);
